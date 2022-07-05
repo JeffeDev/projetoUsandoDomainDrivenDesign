@@ -3,7 +3,7 @@ package br.com.pratica.rh.recursoshumanos.service.reajustes;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public class Promocao implements ReajusteSalarial {
+public class Promocao implements ReajusteSalarial, ReajusteTributavel {
 	private BigDecimal valor;
 	private LocalDate data;
 	

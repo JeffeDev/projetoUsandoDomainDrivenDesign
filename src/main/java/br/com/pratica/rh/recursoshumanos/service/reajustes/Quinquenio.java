@@ -22,9 +22,4 @@ public class Quinquenio implements ReajusteSalarial {
 		return this.data;
 	}
 
-	@Override
-	public BigDecimal valorTributo() {
-		return BigDecimal.ZERO;
-	}
-
 }
