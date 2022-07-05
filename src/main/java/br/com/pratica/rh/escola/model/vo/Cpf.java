@@ -3,11 +3,16 @@ package br.com.pratica.rh.escola.model.vo;
 import java.util.InputMismatchException;
 
 public class Cpf {
+	public String getNumero() {
+		return numero;
+	}
+
 	private String numero;
 
 	public Cpf(String numero) {
+		// || !numero.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}"
+		
 		if (numero == null ) { 
-			// || !numero.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}"
 			throw new IllegalArgumentException("CPF invalido!");
 		}
 

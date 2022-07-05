@@ -19,5 +19,22 @@ public class Telefone {
 		this.ddd = ddd;
 		this.numero = numero;
 	}
+
+	public String getDdd() {
+		return ddd;
+	}
+
+	public String getNumero() {
+		return numero;
+	}
+	
+	public static String imprimeTelefone(String ddd, String numero) {
+		if (numero.length() == 8) {
+			return ("(" + ddd + ")" +" "+ numero.substring(0, 4) + "-"
+					+ numero.substring(5, 8));	
+		} else
+		return ("(" + ddd + ")" +" "+ numero.substring(0, 5) + "-"
+				+ numero.substring(6, 9));
+	}
 	
 }

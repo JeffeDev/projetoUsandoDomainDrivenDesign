@@ -9,7 +9,7 @@ public class PromocaoDeFuncionarios {
 		Cargo cargoAtual = funcionario.getCargo();
 		
 		if(Cargo.GERENTE == cargoAtual ) {
-			throw new ValidacaoException("Gerente é o cargo mássimo!");
+			throw new ValidacaoException("Gerente é o cargo máximo!");
 		}
 		
 		if(metaBatida) {
