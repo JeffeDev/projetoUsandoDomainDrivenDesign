@@ -4,21 +4,39 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Funcionario {
+
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
-	private String cpf;
+	private DadosPessoais dadosPessoais;
+	private BigDecimal salario;
 	
-	@Enumerated(EnumType.STRING) 
-	private Cargo cargo;
+	private LocalDate dataUltimoReajuste;	
+	
+	public DadosPessoais getDadosPessoais() {
+		return dadosPessoais;
+	}
+
+	public void setDadosPessoais(DadosPessoais dadosPessoais) {
+		this.dadosPessoais = dadosPessoais;
+	}
+
+	public void setSalario(BigDecimal salario) {
+		this.salario = salario;
+	}
+
+	public Funcionario(Long id, DadosPessoais dadosPessoais, LocalDate dataUltimoReajuste, BigDecimal salario) {
+		super();
+		this.id = id;
+		this.dadosPessoais = dadosPessoais;
+		this.dataUltimoReajuste = dataUltimoReajuste;
+		this.salario = salario;
+	}
 	
 	public Long getId() {
 		return id;
@@ -26,53 +44,6 @@ public class Funcionario {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	private BigDecimal salario;
-	private LocalDate dataUltimoReajuste;
-
-	public Funcionario(String nome, String cpf, Cargo cargo, BigDecimal salario) {
-		this.nome = nome;
-		this.cpf = cpf;
-		this.cargo = cargo;
-		this.salario = salario;
-	}
-
-	public void atualizarSalario(BigDecimal novoSalario) {
-		this.salario = novoSalario;
-		this.dataUltimoReajuste = LocalDate.now();
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-
-	public Cargo getCargo() {
-		return cargo;
-	}
-
-	public void setCargo(Cargo cargo) {
-		this.cargo = cargo;
-	}
-
-	public BigDecimal getSalario() {
-		return salario;
-	}
-
-	public void setSalario(BigDecimal salario) {
-		this.salario = salario;
 	}
 
 	public LocalDate getDataUltimoReajuste() {
@@ -83,8 +54,21 @@ public class Funcionario {
 		this.dataUltimoReajuste = dataUltimoReajuste;
 	}
 
-	public void promover(Cargo novoCargo) {
-		this.cargo = novoCargo;
+	public Cargo getCargo() {
+		return dadosPessoais.getCargo();
 	}
+
+	public BigDecimal getSalario() {
+		return dadosPessoais.getSalario();
+	}
+
+	public void atualizarSalario(BigDecimal salarioReajustado) {
+		this.salario = salarioReajustado;
+	}
+	
+	public void promover(Cargo novoCargo) {
+		dadosPessoais.setCargo(novoCargo);
+	}
+
 
 }
