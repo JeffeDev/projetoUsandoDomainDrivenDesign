@@ -1,4 +1,4 @@
-package br.com.pratica.rh.recursoshumanos.model.vo;
+package br.com.pratica.rh.escola.model.vo;
 
 public class Email {
 	private String endereco;
@@ -8,10 +8,6 @@ public class Email {
 			throw new IllegalArgumentException("Email inválido!");
 		}
 		this.endereco = endereco;
-	}
-
-	public String getEndereco() {
-		return endereco;
 	}
 	
 }

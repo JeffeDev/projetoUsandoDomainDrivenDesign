@@ -1,4 +1,4 @@
-package br.com.pratica.rh.recursoshumanos.model;
+package br.com.pratica.rh.escola.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

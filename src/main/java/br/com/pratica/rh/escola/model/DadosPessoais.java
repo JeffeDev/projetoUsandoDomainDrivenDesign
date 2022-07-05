@@ -1,4 +1,4 @@
-package br.com.pratica.rh.recursoshumanos.model;
+package br.com.pratica.rh.escola.model;
 
 import java.math.BigDecimal;
 
@@ -7,18 +7,20 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
 
+import br.com.pratica.rh.escola.model.vo.Cpf;
+
 @Entity
 public class DadosPessoais {
 	private String nome;
 	@Id
-	private String cpf;
+	private Cpf cpf;
 	@Enumerated(EnumType.STRING) 
 	private Cargo cargo;
 	private BigDecimal salario;
 	
 	public DadosPessoais(String nome, String cpf, Cargo cargo, BigDecimal salario) {
 		this.nome = nome;
-		this.cpf = cpf;
+		//Cpf(cpf);
 		this.cargo = cargo;
 		this.salario = salario;
 	}
@@ -32,14 +34,6 @@ public class DadosPessoais {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
 	}
 
 	public Cargo getCargo() {

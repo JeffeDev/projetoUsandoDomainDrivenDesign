@@ -1,8 +1,8 @@
-package br.com.pratica.rh.recursoshumanos.service.regrasalario;
+package br.com.pratica.rh.esola.service.regrasalario;
 
 import java.math.BigDecimal;
 
-import br.com.pratica.rh.recursoshumanos.model.Funcionario;
+import br.com.pratica.rh.escola.model.Funcionario;
 
 public interface ValidacaoReajuste {
 	void Validar(Funcionario funcionario, BigDecimal aumento);

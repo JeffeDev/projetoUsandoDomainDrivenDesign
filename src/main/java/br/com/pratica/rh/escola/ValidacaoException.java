@@ -1,4 +1,4 @@
-package br.com.pratica.rh.recursoshumanos;
+package br.com.pratica.rh.escola;
 
 public class ValidacaoException extends RuntimeException {
 

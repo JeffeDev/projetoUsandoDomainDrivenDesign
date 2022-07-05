@@ -1,4 +1,4 @@
-package br.com.pratica.rh.recursoshumanos.service.reajustes;
+package br.com.pratica.rh.escola.service.reajustes;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

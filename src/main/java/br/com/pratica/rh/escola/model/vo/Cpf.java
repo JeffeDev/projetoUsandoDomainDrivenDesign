@@ -1,4 +1,4 @@
-package br.com.pratica.rh.recursoshumanos.model.vo;
+package br.com.pratica.rh.escola.model.vo;
 
 public class Cpf {
 	private String numero;

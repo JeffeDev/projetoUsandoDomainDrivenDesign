@@ -1,11 +1,11 @@
-package br.com.pratica.rh.recursoshumanos.service.regrasalario;
+package br.com.pratica.rh.esola.service.regrasalario;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-import br.com.pratica.rh.recursoshumanos.ValidacaoException;
-import br.com.pratica.rh.recursoshumanos.model.Funcionario;
+import br.com.pratica.rh.escola.ValidacaoException;
+import br.com.pratica.rh.escola.model.Funcionario;
 
 public class ValidacaoPeriodicidadeEntreReajustes implements ValidacaoReajuste{
 	
