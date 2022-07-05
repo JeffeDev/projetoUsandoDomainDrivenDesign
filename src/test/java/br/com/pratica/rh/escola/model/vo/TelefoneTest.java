@@ -16,6 +16,17 @@ class TelefoneTest {
 
         assertThrows(IllegalArgumentException.class,
             () -> new Telefone("1", "123456789"));
+        assertThrows(IllegalArgumentException.class,
+                () -> new Telefone("12", "1234567"));
+
+    }
+    
+    @Test
+    void deveriaCriarTelefoneComDDDValidos() {
+    	assertDoesNotThrow(
+                () -> new Telefone("48", "123456789"));
+    	assertDoesNotThrow(
+                () -> new Telefone("48", "12345678"));
     }
 
 }
