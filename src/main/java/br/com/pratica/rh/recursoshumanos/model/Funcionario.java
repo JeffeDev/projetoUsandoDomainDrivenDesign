@@ -43,6 +43,7 @@ public class Funcionario {
 
 	public void atualizarSalario(BigDecimal novoSalario) {
 		this.salario = novoSalario;
+		this.dataUltimoReajuste = LocalDate.now();
 	}
 
 	public String getNome() {
