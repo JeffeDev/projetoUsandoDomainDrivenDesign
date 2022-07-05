@@ -2,10 +2,37 @@ package br.com.pratica.rh.recursoshumanos.model;
 
 public enum Cargo {
 
-	ASSISTENTE,
-	ANALISTA,
-	ESPECIALISTA,
-	GERENTE,
-	DESENVOLVEDOR_JAVA;
+	ASSISTENTE {
+		@Override
+		public Cargo getProximoCargo() {
+			return DESENVOLVEDOR_JAVA;
+		}
+	},
+	DESENVOLVEDOR_JAVA {
+		@Override
+		public Cargo getProximoCargo() {
+			return ANALISTA;
+		}
+	},
+	ANALISTA {
+		@Override
+		public Cargo getProximoCargo() {
+			return ESPECIALISTA;
+		}
+	},
+	ESPECIALISTA {
+		@Override
+		public Cargo getProximoCargo() {
+			return GERENTE;
+		}
+	},
+	GERENTE {
+		@Override
+		public Cargo getProximoCargo() {
+			return GERENTE;
+		}
+	};
+
+	public abstract Cargo getProximoCargo();
 
 }

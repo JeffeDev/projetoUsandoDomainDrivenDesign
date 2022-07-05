@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import br.com.pratica.rh.recursoshumanos.model.Funcionario;
+import br.com.pratica.rh.recursoshumanos.service.regrasalario.ValidacaoReajuste;
 
 public class ReajusteService {
 	
@@ -20,4 +21,5 @@ public class ReajusteService {
 	public ReajusteService(List<ValidacaoReajuste> validacoes) {
 		this.validacoes = validacoes;
 	}
+	
 }

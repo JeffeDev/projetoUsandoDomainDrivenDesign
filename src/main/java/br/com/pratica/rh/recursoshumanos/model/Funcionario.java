@@ -1,7 +1,6 @@
 package br.com.pratica.rh.recursoshumanos.model;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
@@ -10,8 +9,6 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import br.com.pratica.rh.recursoshumanos.ValidacaoException;
 
 @Entity
 public class Funcionario {
@@ -84,6 +81,10 @@ public class Funcionario {
 
 	public void setDataUltimoReajuste(LocalDate dataUltimoReajuste) {
 		this.dataUltimoReajuste = dataUltimoReajuste;
+	}
+
+	public void promover(Cargo novoCargo) {
+		this.cargo = novoCargo;
 	}
 
 }
