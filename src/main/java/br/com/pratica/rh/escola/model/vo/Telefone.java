@@ -3,6 +3,7 @@ package br.com.pratica.rh.escola.model.vo;
 public class Telefone {
 	private String ddd;
 	private String numero;
+	private String numeroFormatado;
 	
 	public Telefone(String ddd, String numero) {
 	    
@@ -18,6 +19,7 @@ public class Telefone {
 	    
 		this.ddd = ddd;
 		this.numero = numero;
+		this.setNumeroFormatado(imprimeTelefone(ddd, numero));
 	}
 
 	public String getDdd() {
@@ -35,6 +37,14 @@ public class Telefone {
 		} else
 		return ("(" + ddd + ")" +" "+ numero.substring(0, 5) + "-"
 				+ numero.substring(6, 9));
+	}
+
+	public String getNumeroFormatado() {
+		return numeroFormatado;
+	}
+
+	public void setNumeroFormatado(String numeroFormatado) {
+		this.numeroFormatado = numeroFormatado;
 	}
 	
 }

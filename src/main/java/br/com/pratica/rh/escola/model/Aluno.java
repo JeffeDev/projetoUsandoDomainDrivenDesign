@@ -12,6 +12,25 @@ public class Aluno {
 	private String nome;
 	private Email email;
 	
+	
+	public Aluno(Cpf cpf, String nome, Email email) {
+		this.cpf = cpf;
+		this.nome = nome;
+		this.email = email;
+	}
+
+	public Cpf getCpf() {
+		return cpf;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public Email getEmail() {
+		return email;
+	}
+
 	private List<Telefone> telefones = new ArrayList<>();
 	
 	public void adicionarTelefone(String ddd, String numero) {
