@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 import br.com.pratica.rh.escola.ValidacaoException;
-import br.com.pratica.rh.escola.model.Funcionario;
+import br.com.pratica.rh.escola.model.funcionario.Funcionario;
 
 public class ValidarPercentualSalario implements ValidacaoReajuste{
 	public void Validar(Funcionario funcionario, BigDecimal aumento) {

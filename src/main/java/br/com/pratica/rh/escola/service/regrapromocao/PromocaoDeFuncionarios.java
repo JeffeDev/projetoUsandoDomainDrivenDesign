@@ -1,8 +1,8 @@
 package br.com.pratica.rh.escola.service.regrapromocao;
 
 import br.com.pratica.rh.escola.ValidacaoException;
-import br.com.pratica.rh.escola.model.Cargo;
-import br.com.pratica.rh.escola.model.Funcionario;
+import br.com.pratica.rh.escola.model.funcionario.Cargo;
+import br.com.pratica.rh.escola.model.funcionario.Funcionario;
 
 public class PromocaoDeFuncionarios {
 	public void promover(Funcionario funcionario, Boolean metaBatida) {

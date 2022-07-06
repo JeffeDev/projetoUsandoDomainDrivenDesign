@@ -3,7 +3,7 @@ package br.com.pratica.rh.escola.service;
 import java.math.BigDecimal;
 import java.util.List;
 
-import br.com.pratica.rh.escola.model.Funcionario;
+import br.com.pratica.rh.escola.model.funcionario.Funcionario;
 import br.com.pratica.rh.esola.service.regrasalario.ValidacaoReajuste;
 
 public class ReajusteService {

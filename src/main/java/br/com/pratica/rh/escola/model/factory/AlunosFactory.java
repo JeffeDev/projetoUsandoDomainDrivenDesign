@@ -1,6 +1,6 @@
 package br.com.pratica.rh.escola.model.factory;
 
-import br.com.pratica.rh.escola.model.Aluno;
+import br.com.pratica.rh.escola.model.aluno.Aluno;
 import br.com.pratica.rh.escola.model.vo.Cpf;
 import br.com.pratica.rh.escola.model.vo.Email;
 

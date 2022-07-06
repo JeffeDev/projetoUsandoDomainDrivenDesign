@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 import br.com.pratica.rh.escola.ValidacaoException;
-import br.com.pratica.rh.escola.model.Funcionario;
+import br.com.pratica.rh.escola.model.funcionario.Funcionario;
 
 public class ValidacaoPeriodicidadeEntreReajustes implements ValidacaoReajuste{
 	

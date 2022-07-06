@@ -1,4 +1,4 @@
-package br.com.pratica.rh.escola.model;
+package br.com.pratica.rh.escola.model.funcionario;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import br.com.pratica.rh.escola.model.DadosPessoais;
 
 @Entity
 public class Funcionario {
@@ -24,10 +26,6 @@ public class Funcionario {
 
 	public void setDadosPessoais(DadosPessoais dadosPessoais) {
 		this.dadosPessoais = dadosPessoais;
-	}
-
-	public void setSalario(BigDecimal salario) {
-		this.salario = salario;
 	}
 
 	public Funcionario(Long id, DadosPessoais dadosPessoais, LocalDate dataUltimoReajuste, BigDecimal salario) {

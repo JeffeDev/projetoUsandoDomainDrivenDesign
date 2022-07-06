@@ -1,4 +1,4 @@
-package br.com.pratica.rh.escola.model;
+package br.com.pratica.rh.escola.model.funcionario;
 
 public enum Cargo {
 

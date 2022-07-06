@@ -1,6 +1,8 @@
-package br.com.pratica.rh.escola.model;
+package br.com.pratica.rh.escola.model.funcionario;
 
 import javax.persistence.Entity;
+
+import br.com.pratica.rh.escola.model.DadosPessoais;
 
 @Entity
 public class Terceirizados {
@@ -9,7 +11,6 @@ public class Terceirizados {
 	private DadosPessoais dadosPessoais;
 	
 	public Terceirizados(Long idTerceirizado, String empresaTerceirizada, DadosPessoais dadosPessoais) {
-		super();
 		this.idTerceirizado = idTerceirizado;
 		this.empresaTerceirizada = empresaTerceirizada;
 		this.dadosPessoais = dadosPessoais;

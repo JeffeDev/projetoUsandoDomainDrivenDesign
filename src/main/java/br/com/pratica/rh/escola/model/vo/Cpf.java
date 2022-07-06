@@ -10,7 +10,6 @@ public class Cpf {
 	private String numero;
 
 	public Cpf(String numero) {
-		// || !numero.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}"
 		
 		if (numero == null ) { 
 			throw new IllegalArgumentException("CPF invalido!");

@@ -1,6 +1,6 @@
 package br.com.pratica.rh.escola.testarclasses;
 
-import br.com.pratica.rh.escola.model.Aluno;
+import br.com.pratica.rh.escola.model.aluno.Aluno;
 import br.com.pratica.rh.escola.model.factory.AlunosFactory;
 
 public class Testar {

@@ -1,6 +1,8 @@
-package br.com.pratica.rh.escola.model;
+package br.com.pratica.rh.escola.model.indicacao;
 
 import java.time.LocalDateTime;
+
+import br.com.pratica.rh.escola.model.aluno.Aluno;
 
 public class Indicacao {
 	private Aluno quemIndicou;

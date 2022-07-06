@@ -1,4 +1,4 @@
-package br.com.pratica.rh.escola.model;
+package br.com.pratica.rh.escola.model.aluno;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,11 @@ public class Aluno {
 	private Cpf cpf;
 	private String nome;
 	private Email email;
+	private List<Telefone> telefones = new ArrayList<>();
 	
+	public void adicionarTelefone(String ddd, String numero) {
+		this.telefones.add( new Telefone(ddd, numero) );
+	}
 	
 	public Aluno(Cpf cpf, String nome, Email email) {
 		this.cpf = cpf;
@@ -31,9 +35,5 @@ public class Aluno {
 		return email;
 	}
 
-	private List<Telefone> telefones = new ArrayList<>();
-	
-	public void adicionarTelefone(String ddd, String numero) {
-		this.telefones.add( new Telefone(ddd, numero) );
-	}
+
 }
